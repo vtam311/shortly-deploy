@@ -120,7 +120,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('deploy', ['jshint', 'concat', 'uglify']
+  grunt.registerTask('deploy', ['jshint', 'mochaTest', 'concat', 'uglify']
     // add your deploy tasks here
   );
 };
