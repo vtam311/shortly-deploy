@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         src: [
           './public/client/*.js',
         ],
-        dest: "./public/dist/production.js",
+        dest: "./public/dist/production.js"
       }
     },
 
@@ -111,9 +111,8 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('deploy', [
+  grunt.registerTask('deploy', ['concat']
     // add your deploy tasks here
-  ]);
-
+  );
 
 };
