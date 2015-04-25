@@ -28,7 +28,12 @@ module.exports = function(grunt) {
     },
 
     uglify: {
+      build: {
+          src: './public/dist/production.js',
+          dest: './public/dist/production.min.js'
+      }
     },
+
 
     jshint: {
       files: [
@@ -111,10 +116,10 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('deploy', ['concat']
+  grunt.registerTask('deploy', ['concat', 'uglify']
     // add your deploy tasks here
   );
 
-  grunt.registerTask('default', ['concat']);
+  grunt.registerTask('default', ['concat', 'uglify']);
 
 };

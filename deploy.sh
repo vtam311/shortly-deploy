@@ -134,6 +134,7 @@ if [ -e "$DEPLOYMENT_TARGET/Gruntfile.js" ]; then
   exitWithMessageOnError "installing grunt failed"
   ./node_modules/.bin/grunt --no-color build
   exitWithMessageOnError "grunt failed"
+  #run grunt here?
   cd - > /dev/null
 fi
 ##################################################################################################################################
