@@ -2,7 +2,14 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+
     concat: {
+      dist: {
+        src: [
+          './public/client/*.js',
+        ],
+        dest: "./public/dist/production.js",
+      }
     },
 
     mochaTest: {
